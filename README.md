@@ -1,2 +1,32 @@
-# DjangoNewsSite
-DjangoNewsSite: A dynamic and reliable news website powered by Django, delivering real-time updates, in-depth reports, and the latest headlines from around the globe. Stay informed with our user-friendly platform designed for seamless browsing and accurate journalism
+Kumwesu News
+Is simple News Website Built with Django 3 and Bootstrap.
+
+Models
+------------
+1.Category
+- Title
+- Image
+
+2.News
+- Category
+- Title
+- Image
+- Detail
+
+3.Comments
+- News
+- Name
+- Email
+- Comments
+- Status
+
+Templates
+------------
+- views.py
+- urls.py
+- project/urls.py
+- templates
+- base.html
+- index.html
+- category.html
+- detail.html
