@@ -1,0 +1,28 @@
+body {
+    background-image: url('email-pattern.webp'); /* تصویر پس‌زمینه */
+    background-repeat: repeat; /* تکرار در هر دو جهت (افقی و عمودی) */
+    background-size: auto; /* اندازه تصویر اصلی حفظ می‌شود */
+    margin: 0;
+    padding: 0;
+}
+
+.category2{
+    background-color: #9AA6B2!important;
+    padding: 6px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.bg-green {
+    background-color: #9AA6B2 !important;
+}
+
+
+.bg-purple{
+    background-color: #BCCCDC;
+}
+
+.color2{
+    background-color: #F8FAFC!important;
+    color: black!important;
+}
