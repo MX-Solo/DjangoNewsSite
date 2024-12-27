@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: django_app
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1
+
+  backup_service:
+    image: amazon/aws-cli:2.13.1
+    container_name: backup_service
+    volumes:
+      - .:/app
+    environment:
+      - AWS_ACCESS_KEY_ID=your_access_key
+      - AWS_SECRET_ACCESS_KEY=your_secret_key
+      - AWS_BUCKET_NAME=your_bucket_name
+      - DATABASE_FILE=/app/db.sqlite3
+    command: >
+      sh -c "while true; do 
+               aws s3 cp $DATABASE_FILE s3://$AWS_BUCKET_NAME/$(basename $DATABASE_FILE) && 
+               echo 'Database uploaded to S3'; 
+               sleep 86400; 
+             done"

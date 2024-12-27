@@ -1,0 +1,16 @@
+*.pyc
+__pycache__/
+
+env/
+venv/
+
+
+*.log
+
+local_settings.py
+
+
+
+.idea/
+.vscode/
+
