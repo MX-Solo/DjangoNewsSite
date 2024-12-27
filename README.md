@@ -1,4 +1,3 @@
-```md
 # Django News Site
 
 A Django-based web application for managing and publishing news articles. This project is designed to demonstrate Django's capabilities, including user authentication, content management, and an admin panel.
@@ -171,4 +170,3 @@ Contributions are welcome! To contribute:
 The backup service in `docker-compose.yml` ensures regular backups of the SQLite database to AWS S3. It runs continuously and uploads the database every 24 hours.
 
 For more information, refer to the `docker-compose.yml` file.
-```
